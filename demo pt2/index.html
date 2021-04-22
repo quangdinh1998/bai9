@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo pt bậc 2 </title>
+</head>
+<body>
+    <p>Demo giải phương trình bậc 2</p>
+    <table>
+        <tr>
+            <th>Hệ số a</th>
+            <th>Hệ số b</th>
+            <th>Hệ số c</th>
+            <th></th>
+        </tr>
+        <tr>
+            <td><input type="number" id="a"></td>
+            <td><input type="number" id="b"></td>
+            <td><input type="number" id="c"></td>
+            <td><button type="button" style="background-color: cornflowerblue;" onclick="solve()">SOLVE</button></td>
+        </tr>
+        <tr>
+            <td colspan="4" id="result">Phương trình có nghiệm là:</td>
+        </tr>
+    </table>
+    <script>
+       function solve() {
+            let a = document.getElementById('a').value;
+            let b = document.getElementById('b').value;
+            let c = document.getElementById('c').value;
+            if (a === 0) {
+                document.getElementById("result").innerHTML = 'Phương trình bạn nhập là pt bậc nhất';
+            } else {
+                let denta = (b*b) - 4*a*c;
+
+                if (denta === 0) {
+                    document.getElementById("result").innerHTML = 'Phương trình có nghiệm kép x1 = x2 = ' + -b/2*a;
+                } else {
+                    if (denta < 0) {
+                        document.getElementById("result").innerHTML = 'Phương trình đã cho vô nghiệm';
+                    } else {
+                        document.getElementById("result").innerHTML = 'Phương trình đã cho có 2 nghiệm phân biệt x1= '+ (-b-Math.sqrt(denta))/(2*a) + ' và x2= '+ (-b+Math.sqrt(denta))/(2*a);
+                        
+                    }
+                }
+                
+            }
+       }
+    </script>
+</body>
+</html>
