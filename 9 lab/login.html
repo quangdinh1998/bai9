@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login demo</title>
+</head>
+<body>
+
+</body>
+<script>
+  let user = prompt('Input username: ');
+  if (user === 'Admin') {
+       let psw = prompt('Password:  ');
+       if (psw ==='TheMaster') {
+           alert('Welcome');
+       } else { if (psw === 'null') {
+           alert('Canceled');
+       } else {
+           alert('Wrong password');
+       }
+           
+       }
+      
+  } else {
+      if (user === 'null') {
+          alert('Canceled');
+      } else {
+          alert("I don't know you");
+      }
+      
+  }
+</script>
+</html>
