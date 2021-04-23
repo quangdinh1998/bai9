@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo BMI</title>
+</head>
+<body>
+    <p>Chương trình sẽ cho biết bạn trông như thế nào với chiều cao và cân nặng của mình</p>
+    <label for="weight">Nhập cân nặng</label> <br/>
+    <input type="number" id="weight"> <br/>
+    <label for="height">Nhập chiều cao</label> <br/>
+    <input type="text" id="height"> <br/>
+    <p><button type="button" onclick="test()">TEST</button></p>
+</body>
+<script>
+    function test() {
+        let w = +document.getElementById('weight').value;
+    let h = +document.getElementById('height').value;
+    let bmi = w / (Math.pow(h,2));
+    if (bmi < 16) {
+        alert('Gầy độ III');
+        
+    } else { if ((bmi>=16) && (bmi <17))  {
+        alert('Gầy độ II');
+        
+    } else { if ((bmi>=17) && (bmi < 18.5)) {
+        alert('Gầy độ I');
+        
+    } else { if ((bmi >= 18.5) && (bmi < 25)) {
+        alert('Bình thường');
+        
+    } else { if ((bmi >= 25) && (bmi < 30)) {
+        alert('Thừa cân');
+        
+    } else { if ((bmi >= 30) && (bmi < 35)) {
+        alert('Béo phì độ I');
+        
+    } else { if ((bmi >= 35) && (bmi < 40)) {
+        alert('Béo phì độ II');
+    } else { if ((bmi >= 40)) {
+        alert('Béo phì độ III')
+    } else {
+        
+    }
+        
+    }
+        
+    }
+        
+    }
+        
+    }
+        
+    }
+        
+    }
+        
+    }
+    }
+</script>
+</html>
