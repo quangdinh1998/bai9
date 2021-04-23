@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo test even number</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Nhập số vào ô bên dưới</th>
+            <th>Ấn vào nút bên dưới để kiểm tra</th>
+        </tr>
+        <tr>
+            <td><input type="number" id="numberin"></td>
+            <td><button type="button" onclick="test()">TEST</button></td>
+        </tr>
+    </table>
+</body>
+<Script>
+    function test(){
+        let a = +document.getElementById('numberin').value;
+    let b = a%2;
+    if (b === 0) {
+        alert('Số đã nhập là số chẵn');
+        
+    } else {
+        alert('Số đã nhập không phải số chẵn');
+        
+    }
+    }
+</Script>
+</html>
