@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Demo caculator</title>
+</head>
+<body>
+    <form action="">
+        <div>
+            <input type="text" id="screen" size="15">
+            <table>
+                <tr>
+                    <td><button type="button"  onclick="press(1)" style="width: 30px; height: 30px;">1</button></td>
+                    <td><button type="button"  onclick="press(2)"  style="width: 30px; height: 30px;">2</button></td>
+                    <td><button type="button"  onclick="press(3)" style="width: 30px; height: 30px;">3</button></td>
+                    <td><button type="button"  onclick="press('add')" style="width: 30px; height: 30px;">+</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"  onclick="press(4)" style="width: 30px; height: 30px;">4</button></td>
+                    <td><button type="button"  onclick="press(5)" style="width: 30px; height: 30px;">5</button></td>
+                    <td><button type="button"  onclick="press(6)" style="width: 30px; height: 30px;">6</button></td>
+                    <td><button type="button"  onclick="press('-')" style="width: 30px; height: 30px;">-</button></td>
+                </tr>
+                <tr>
+                    <td><button type="button"  onclick="press(7)" style="width: 30px; height: 30px;">7</button></td>
+                    <td><button type="button"  onclick="press(8)" style="width: 30px; height: 30px;">8</button></td>
+                    <td><button type="button"  onclick="press(9)" style="width: 30px; height: 30px;">9</button></td>
+                    <td><button type="button"  onclick="press('x')" style="width: 30px; height: 30px;">x</button></td>
+                </tr>
+                <tr>
+                    <td><button type="reset"   style="width: 30px; height: 30px;">C</button></td>
+                    <td><button type="button"  onclick="press(0)" style="width: 30px; height: 30px;">0</button></td>
+                    <td><button type="button"  onclick="result()" style="width: 30px; height: 30px;">=</button></td>
+                    <td><button type="button"  onclick="press(':')" style="width: 30px; height: 30px;">:</button></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+<script>
+    function press(number) {
+        document.getElementById('screen').value += number;
+    }
+    function result() {
+        let display = document.getElementById('screen').value;
+        document.getElementById('screen').value = eval(display);
+    }
+</script>
+</html>
